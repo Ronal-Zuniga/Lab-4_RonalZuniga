@@ -2,23 +2,23 @@
 package lab.pkg4_ronalzuniga;
 
 public class Secuestro extends Mayor{
-    String tiempo;
+    int tiempo;
     String estado_vida;
 
     public Secuestro() {
         super();
     }
 
-    public Secuestro(String tiempo, String estado_vida) {
+    public Secuestro(int tiempo, String estado_vida) {
         this.tiempo = tiempo;
         this.estado_vida = estado_vida;
     }
 
-    public String getTiempo() {
+    public int getTiempo() {
         return tiempo;
     }
 
-    public void setTiempo(String tiempo) {
+    public void setTiempo(int tiempo) {
         this.tiempo = tiempo;
     }
 
