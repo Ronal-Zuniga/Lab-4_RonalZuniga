@@ -9,6 +9,12 @@ public class Terrorismo extends Mayor{
         super();
     }
 
+    public Terrorismo(String artefacto, int num_victimas, int nivel_gravedad, String nombre_victima, String culpable, String sentencia, String pais) {
+        super(nivel_gravedad, nombre_victima, culpable, sentencia, pais);
+        this.artefacto = artefacto;
+        this.num_victimas = num_victimas;
+    }
+
     public Terrorismo(String artefacto, int num_victimas) {
         this.artefacto = artefacto;
         this.num_victimas = num_victimas;

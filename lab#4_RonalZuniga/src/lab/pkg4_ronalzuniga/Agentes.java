@@ -4,8 +4,7 @@ package lab.pkg4_ronalzuniga;
 import java.util.ArrayList;
 
 
-public class Agentes{
-    ArrayList<Delito> delitos;
+public abstract class Agentes{
     String nombre;
     int edad;
     String genero;
@@ -15,21 +14,12 @@ public class Agentes{
     public Agentes() {
     }
 
-    public Agentes(ArrayList<Delito> delitos, String nombre, int edad, String genero, String pais, String descripcion) {
-        this.delitos = delitos;
+    public Agentes(String nombre, int edad, String genero, String pais, String descripcion) {
         this.nombre = nombre;
         this.edad = edad;
         this.genero = genero;
         this.pais = pais;
         this.descripcion = descripcion;
-    }
-
-    public ArrayList<Delito> getDelitos() {
-        return delitos;
-    }
-
-    public void setDelitos(ArrayList<Delito> delitos) {
-        this.delitos = delitos;
     }
 
     public String getNombre() {
@@ -74,7 +64,9 @@ public class Agentes{
 
     @Override
     public String toString() {
-        return "Agentes{" + "delitos=" + delitos + ", nombre=" + nombre + ", edad=" + edad + ", genero=" + genero + ", pais=" + pais + ", descripcion=" + descripcion + '}';
+        return "Agentes{" + "nombre=" + nombre + ", edad=" + edad + ", genero=" + genero + ", pais=" + pais + ", descripcion=" + descripcion + '}';
     }
+    
+    public abstract void cometer_delito(String c, int n);
     
 }

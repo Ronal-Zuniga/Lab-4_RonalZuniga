@@ -1,11 +1,15 @@
 package lab.pkg4_ronalzuniga;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Lab4_RonalZuniga {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        ArrayList<Delito> delitos = new ArrayList();
+        ArrayList<Criminales> criminales = new ArrayList();
+        ArrayList<Agentes> agentes = new ArrayList();
         int op = 0;
         while (op != 5) {
             System.out.println("----MENU----");
@@ -31,12 +35,31 @@ public class Lab4_RonalZuniga {
                         x = sc.nextInt();
                         switch(x){
                             case 1:
+                                
                                 break;
                                 
                             case 2:
+                                
                                 break;
                                 
                             case 3:
+                                
+                                String aux;
+                                int e;
+                                System.out.print("Ingrese el nombre: ");
+                                aux =sc.next();
+                                
+                                System.out.print("Ingrese la edad: ");
+                                e = sc.nextInt();
+                                System.out.print("Seleccione Genero (1. Masculino 2. Femenino): ");
+                                e = sc.nextInt();
+                                if (e==1) {
+                                    
+                                }else if(e==2){
+                                
+                                }
+                                System.out.print("Ingrese el pais: ");
+                                aux = sc.next();
                                 break;
                         }
 

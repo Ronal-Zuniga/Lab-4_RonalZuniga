@@ -10,6 +10,12 @@ public class Asesinato extends Mayor{
         super();
     }
 
+    public Asesinato(String arma, int num_cuerpos, int nivel_gravedad, String nombre_victima, String culpable, String sentencia, String pais) {
+        super(nivel_gravedad, nombre_victima, culpable, sentencia, pais);
+        this.arma = arma;
+        this.num_cuerpos = num_cuerpos;
+    }
+
     public Asesinato(String arma, int num_cuerpos) {
         this.arma = arma;
         this.num_cuerpos = num_cuerpos;

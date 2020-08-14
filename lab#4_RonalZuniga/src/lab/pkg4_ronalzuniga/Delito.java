@@ -4,7 +4,7 @@ package lab.pkg4_ronalzuniga;
 public class Delito {
     String descripcion;
     String nombre_victima;
-    boolean culpable;
+    String culpable;
     String sentencia;
     String fecha;
     String pais;
@@ -13,7 +13,7 @@ public class Delito {
     public Delito() {
     }
 
-    public Delito(String descripcion, String nombre_victima, boolean culpable, String sentencia, String fecha, String pais, int num_delito) {
+    public Delito(String descripcion, String nombre_victima, String culpable, String sentencia, String fecha, String pais, int num_delito) {
         this.descripcion = descripcion;
         this.nombre_victima = nombre_victima;
         this.culpable = culpable;
@@ -22,6 +22,14 @@ public class Delito {
         this.pais = pais;
         this.num_delito = num_delito;
     }
+
+    public Delito(String nombre_victima, String culpable, String sentencia, String pais) {
+        this.nombre_victima = nombre_victima;
+        this.culpable = culpable;
+        this.sentencia = sentencia;
+        this.pais = pais;
+    }
+    
 
     public String getDescripcion() {
         return descripcion;
@@ -39,11 +47,11 @@ public class Delito {
         this.nombre_victima = nombre_victima;
     }
 
-    public boolean isCulpable() {
+    public String getCulpable() {
         return culpable;
     }
 
-    public void setCulpable(boolean culpable) {
+    public void setCulpable(String culpable) {
         this.culpable = culpable;
     }
 
@@ -81,11 +89,7 @@ public class Delito {
 
     @Override
     public String toString() {
-        return "Delito{" + "descripcion=" + descripcion + ", nombre_victima=" + nombre_victima + ", culpable=" + culpable + ", sentencia=" + sentencia + ", fecha=" + fecha + ", pais=" + pais + ", num_delito=" + num_delito + '}';
+        return "Delito{" + "nombre_victima=" + nombre_victima + ", culpable=" + culpable + ", sentencia=" + sentencia + ", pais=" + pais + '}';
     }
-    
-    
-    
-    
     
 }

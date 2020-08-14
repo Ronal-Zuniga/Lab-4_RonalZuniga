@@ -8,7 +8,8 @@ public class Prostitucion extends Menor{
         super();
     }
 
-    public Prostitucion(String solicitante) {
+    public Prostitucion(String solicitante, String nombre_policia, int id_policia, int num_celda, String nombre_victima, String culpable, String sentencia, String pais) {
+        super(nombre_policia, id_policia, num_celda, nombre_victima, culpable, sentencia, pais);
         this.solicitante = solicitante;
     }
 

@@ -10,10 +10,12 @@ public class Hurto extends Menor{
         super();
     }
 
-    public Hurto(String objeto, int valor) {
+    public Hurto(String objeto, int valor, String nombre_policia, int id_policia, int num_celda, String nombre_victima, String culpable, String sentencia, String pais) {
+        super(nombre_policia, id_policia, num_celda, nombre_victima, culpable, sentencia, pais);
         this.objeto = objeto;
         this.valor = valor;
     }
+
 
     public String getObjeto() {
         return objeto;

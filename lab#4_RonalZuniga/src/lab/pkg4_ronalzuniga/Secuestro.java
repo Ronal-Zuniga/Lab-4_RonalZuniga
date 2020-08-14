@@ -9,6 +9,12 @@ public class Secuestro extends Mayor{
         super();
     }
 
+    public Secuestro(int tiempo, String estado_vida, int nivel_gravedad, String nombre_victima, String culpable, String sentencia, String pais) {
+        super(nivel_gravedad, nombre_victima, culpable, sentencia, pais);
+        this.tiempo = tiempo;
+        this.estado_vida = estado_vida;
+    }
+
     public Secuestro(int tiempo, String estado_vida) {
         this.tiempo = tiempo;
         this.estado_vida = estado_vida;

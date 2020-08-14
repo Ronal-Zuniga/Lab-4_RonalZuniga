@@ -9,10 +9,12 @@ public class Trafico extends Mayor{
         super();
     }
 
-    public Trafico(String nombre_droga, int cantidad) {
+    public Trafico(String nombre_droga, int cantidad, int nivel_gravedad, String nombre_victima, String culpable, String sentencia, String pais) {
+        super(nivel_gravedad, nombre_victima, culpable, sentencia, pais);
         this.nombre_droga = nombre_droga;
         this.cantidad = cantidad;
     }
+
 
     public String getNombre_droga() {
         return nombre_droga;

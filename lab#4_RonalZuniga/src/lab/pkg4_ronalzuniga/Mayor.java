@@ -8,7 +8,8 @@ public class Mayor extends Delito {
         super();
     }
 
-    public Mayor(int nivel_gravedad) {
+    public Mayor(int nivel_gravedad, String nombre_victima, String culpable, String sentencia, String pais) {
+        super(nombre_victima, culpable, sentencia, pais);
         this.nivel_gravedad = nivel_gravedad;
     }
 

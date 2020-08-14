@@ -10,7 +10,8 @@ public class Vandalismo extends Menor{
         super();
     }
 
-    public Vandalismo(String edificio, int pisos, String nombre_dueño) {
+    public Vandalismo(String edificio, int pisos, String nombre_dueño, String nombre_policia, int id_policia, int num_celda, String nombre_victima, String culpable, String sentencia, String pais) {
+        super(nombre_policia, id_policia, num_celda, nombre_victima, culpable, sentencia, pais);
         this.edificio = edificio;
         this.pisos = pisos;
         this.nombre_dueño = nombre_dueño;
