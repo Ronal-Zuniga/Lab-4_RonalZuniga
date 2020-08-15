@@ -1,24 +1,19 @@
-
 package lab.pkg4_ronalzuniga;
 
-import java.util.ArrayList;
+public class Asesino extends Agentes {
 
-public class Asesino extends Agentes{
     String nombre_victima;
     String arma;
-    ArrayList<Asesinato> a;
 
     public Asesino() {
         super();
     }
 
-    public Asesino(String nombre_victima, String arma, ArrayList<Asesinato> a, String nombre, int edad, String genero, String pais, String descripcion) {
-        super(nombre, edad, genero, pais, descripcion);
+    public Asesino(String nombre_victima, String arma, double dinero, String nombre, int edad, String genero, String pais, String encarcelado, String descripcion) {
+        super(dinero, nombre, edad, genero, pais, encarcelado, descripcion);
         this.nombre_victima = nombre_victima;
         this.arma = arma;
-        this.a = a;
     }
-
 
     public String getNombre_victima() {
         return nombre_victima;
@@ -38,13 +33,11 @@ public class Asesino extends Agentes{
 
     @Override
     public String toString() {
-        return "Asesino{" + "nombre_victima=" + nombre_victima + ", arma=" + arma + ", a=" + a + '}';
+        return "Asesino{" + "nombre_victima=" + nombre_victima + ", arma=" + arma + '}';
     }
 
     @Override
-    public void cometer_delito(String c, int n) {
-        a.add(new Asesinato(c, n));
+    public void cometer_delito() {
     }
-    
-    
+
 }

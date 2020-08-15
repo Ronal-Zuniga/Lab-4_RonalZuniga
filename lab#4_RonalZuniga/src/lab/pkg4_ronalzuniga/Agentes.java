@@ -4,69 +4,36 @@ package lab.pkg4_ronalzuniga;
 import java.util.ArrayList;
 
 
-public abstract class Agentes{
-    String nombre;
-    int edad;
-    String genero;
-    String pais;
-    String descripcion;
+public abstract class Agentes extends Criminales{
+    double dinero;
 
     public Agentes() {
+        super();
     }
 
-    public Agentes(String nombre, int edad, String genero, String pais, String descripcion) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.genero = genero;
-        this.pais = pais;
-        this.descripcion = descripcion;
+    public Agentes(double dinero, String nombre, int edad, String genero, String pais, String encarcelado, String descripcion) {
+        super(nombre, edad, genero, pais, encarcelado, descripcion);
+        this.dinero = dinero;
     }
 
-    public String getNombre() {
-        return nombre;
+    public double getDinero() {
+        return dinero;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDinero(double dinero) {
+        this.dinero = dinero;
     }
 
     @Override
     public String toString() {
-        return "Agentes{" + "nombre=" + nombre + ", edad=" + edad + ", genero=" + genero + ", pais=" + pais + ", descripcion=" + descripcion + '}';
+        return "Agentes{" + "dinero=" + dinero + '}';
     }
     
-    public abstract void cometer_delito(String c, int n);
+    @Override
+    public void cometer_delito(){
+    
+    }
+   
+
     
 }

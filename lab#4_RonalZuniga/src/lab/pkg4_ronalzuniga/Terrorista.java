@@ -1,27 +1,23 @@
-
 package lab.pkg4_ronalzuniga;
 
 import java.util.ArrayList;
 
+public class Terrorista extends Agentes {
 
-public class Terrorista extends Agentes{
     String pais_ataque;
     String ciudad;
     String metodo;
-    ArrayList<Terrorismo> t;
 
     public Terrorista() {
         super();
     }
 
-    public Terrorista(String pais_ataque, String ciudad, String metodo, ArrayList<Terrorismo> t, String nombre, int edad, String genero, String pais, String descripcion) {
-        super(nombre, edad, genero, pais, descripcion);
+    public Terrorista(String pais_ataque, String ciudad, String metodo, double dinero, String nombre, int edad, String genero, String pais, String encarcelado, String descripcion) {
+        super(dinero, nombre, edad, genero, pais, encarcelado, descripcion);
         this.pais_ataque = pais_ataque;
         this.ciudad = ciudad;
         this.metodo = metodo;
-        this.t = t;
     }
-
 
     public String getPais_ataque() {
         return pais_ataque;
@@ -49,12 +45,11 @@ public class Terrorista extends Agentes{
 
     @Override
     public String toString() {
-        return "Terrorista{" + "pais_ataque=" + pais_ataque + ", ciudad=" + ciudad + ", metodo=" + metodo + ", t=" + t + '}';
+        return "Terrorista{" + "pais_ataque=" + pais_ataque + ", ciudad=" + ciudad + ", metodo=" + metodo + '}';
     }
 
     @Override
-    public void cometer_delito(String c, int n) {
-        t.add(new Terrorismo(c,n));
+    public void cometer_delito() {
+
     }
-    
 }
