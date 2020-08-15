@@ -12,13 +12,14 @@ public class Lab4_RonalZuniga {
         ArrayList<Criminales> criminales = new ArrayList();
 
         int op = 0;
-        while (op != 5) {
+        while (op != 6) {
             System.out.println("----MENU----");
             System.out.println("1. Agregar");
             System.out.println("2. Modificar");
             System.out.println("3. Eliminar");
             System.out.println("4. Listar");
-            System.out.println("5. Salir");
+            System.out.println("5. Cometer Delito");
+            System.out.println("6. Salir");
             System.out.println("");
             System.out.print("Seleccione una opcion: ");
             op = sc.nextInt();
@@ -384,7 +385,7 @@ public class Lab4_RonalZuniga {
                                 System.out.println("");
                                 System.out.println("DELITOS");
                                 for (int i = 0; i < delitos.size(); i++) {
-                                    System.out.println(i+"- "+delitos.get(i));
+                                    System.out.println(i + "- " + delitos.get(i));
                                 }
                                 System.out.println("");
                                 break;
@@ -393,7 +394,7 @@ public class Lab4_RonalZuniga {
                                 System.out.println("");
                                 System.out.println("CRIMINALES/AGENTES");
                                 for (int i = 0; i < criminales.size(); i++) {
-                                    System.out.println(i+"- "+criminales.get(i));
+                                    System.out.println(i + "- " + criminales.get(i));
                                 }
                                 System.out.println("");
                                 break;
@@ -403,6 +404,79 @@ public class Lab4_RonalZuniga {
                         }
                     }
                     break;
+
+                case 5:
+                    int v = 0;
+                    while (v != 3) {
+                        System.out.println("");
+                        System.out.println("1. Delito Criminal");
+                        System.out.println("2. Delito Agente");
+                        System.out.println("3.Salir");
+                        System.out.println("");
+                        System.out.print("Seleccione una opcion");
+                        v = sc.nextInt();
+                        switch (v) {
+                            case 1:
+                                System.out.println("");
+                                System.out.print("Seleccione la posiscion del criminal (0-" + criminales.size() + "): ");
+                                int ps = sc.nextInt();
+                                System.out.print("Ingrese la descripcion del delito: ");
+                                String d = sc.next();
+                                System.out.print("Ingrese el numero del delito: ");
+                                int num = sc.nextInt();
+                                criminales.get(ps).cometer_delito(d, num);
+                                break;
+
+                            case 2:
+                                System.out.println("");
+                                System.out.println("1. Terrorista");
+                                System.out.println("2. Asesino");
+                                System.out.println("3. Secuestrador");
+                                System.out.println("");
+                                System.out.print("Seleccione un agente: ");
+                                int a = sc.nextInt();
+                                switch(a){
+                                    case 1:
+                                        System.out.print("Seleccione la posiscion del Agente (0-" + criminales.size() + "): ");
+                                        int pos = sc.nextInt();
+                                        System.out.print("Ingrese el artefacto: ");
+                                        String art = sc.next();
+                                        System.out.print("Ingrese el numero de victimas: ");
+                                        int nv = sc.nextInt();
+                                        criminales.get(pos).cometer_delito(art, nv);
+                                        break;
+                                        
+                                    case 2:
+                                        System.out.print("Seleccione la posiscion del Agente (0-" + criminales.size() + "): ");
+                                        pos = sc.nextInt();
+                                        System.out.print("Ingrese el arma: ");
+                                        String ar = sc.next();
+                                        System.out.print("Ingrese el numero de victimas: ");
+                                        nv = sc.nextInt();
+                                        criminales.get(pos).cometer_delito(ar, nv);
+                                        break;
+                                        
+                                    case 3:
+                                        System.out.print("Seleccione la posiscion del Agente (0-" + criminales.size() + "): ");
+                                        pos = sc.nextInt();
+                                        System.out.print("Ingrese el estado de vida: ");
+                                        String ev = sc.next();
+                                        System.out.print("Ingrese el tiempo retenido: ");
+                                        int tr = sc.nextInt();
+                                        criminales.get(pos).cometer_delito(ev, tr);
+                                        break;
+                                        
+                                    default:
+                                        System.out.println("");
+                                }
+                                break;
+
+                            default:
+                                System.out.println("");
+                        }
+                    }
+                    break;
+
                 default:
                     System.out.println("");
             }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Secuestrador extends Agentes {
 
+    ArrayList<Secuestro> s;
     String nombre_victima;
     double rescate;
 
@@ -35,12 +36,12 @@ public class Secuestrador extends Agentes {
 
     @Override
     public String toString() {
-        return "Secuestrador{" + "nombre_victima=" + nombre_victima + ", rescate=" + rescate + '}';
+        return "Secuestrador{" + "nombre_victima=" + nombre_victima + ", rescate=" + rescate + ", secuestros=" + s + '}';
     }
 
     @Override
-    public void cometer_delito() {
-
+    public void cometer_delito(String c, int n) {
+        s.add(new Secuestro(n, c));
     }
 
 }

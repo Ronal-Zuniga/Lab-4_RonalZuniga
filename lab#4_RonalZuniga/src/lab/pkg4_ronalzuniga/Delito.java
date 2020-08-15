@@ -29,6 +29,11 @@ public class Delito {
         this.sentencia = sentencia;
         this.pais = pais;
     }
+
+    public Delito(String descripcion, int num_delito) {
+        this.descripcion = descripcion;
+        this.num_delito = num_delito;
+    }
     
 
     public String getDescripcion() {

@@ -1,7 +1,10 @@
 package lab.pkg4_ronalzuniga;
 
+import java.util.ArrayList;
+
 public class Asesino extends Agentes {
 
+    ArrayList<Asesinato> a;
     String nombre_victima;
     String arma;
 
@@ -33,11 +36,12 @@ public class Asesino extends Agentes {
 
     @Override
     public String toString() {
-        return "Asesino{" + "nombre_victima=" + nombre_victima + ", arma=" + arma + '}';
+        return "Asesino{" + "nombre_victima=" + nombre_victima + ", arma=" + arma + ", asesinatos=" + a+ '}';
     }
 
     @Override
-    public void cometer_delito() {
+    public void cometer_delito(String c, int n) {
+        a.add(new Asesinato(c, n));
     }
 
 }

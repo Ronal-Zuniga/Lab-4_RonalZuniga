@@ -30,7 +30,7 @@ public abstract class Agentes extends Criminales{
     }
     
     @Override
-    public void cometer_delito(){
+    public void cometer_delito(String c, int n){
     
     }
    

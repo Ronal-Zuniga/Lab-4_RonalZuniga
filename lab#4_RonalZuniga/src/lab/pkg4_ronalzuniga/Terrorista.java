@@ -3,7 +3,7 @@ package lab.pkg4_ronalzuniga;
 import java.util.ArrayList;
 
 public class Terrorista extends Agentes {
-
+    ArrayList<Terrorismo> t;
     String pais_ataque;
     String ciudad;
     String metodo;
@@ -45,11 +45,11 @@ public class Terrorista extends Agentes {
 
     @Override
     public String toString() {
-        return "Terrorista{" + "pais_ataque=" + pais_ataque + ", ciudad=" + ciudad + ", metodo=" + metodo + '}';
+        return "Terrorista{" + "pais_ataque=" + pais_ataque + ", ciudad=" + ciudad + ", metodo=" + metodo + ", ataques=" + t+ '}';
     }
 
     @Override
-    public void cometer_delito() {
-
+    public void cometer_delito(String c, int n) {
+       t.add(new Terrorismo(c,n));
     }
 }
